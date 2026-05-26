@@ -34,3 +34,9 @@ Python Detection Program
 Discord Webhook Alert
         ↓
 User / Community Notification
+
+```
+## 실행방법
+
+pip install -r requirements.txt
+python src/main.py
