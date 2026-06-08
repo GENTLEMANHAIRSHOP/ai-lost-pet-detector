@@ -20,27 +20,16 @@ AI 카메라를 활용해 실종 반려동물 또는 유기견을 탐지하고, 
 - Raspberry Pi 기반 독립 실행 가능
 - YOLO 모델 확장 가능
 
-## Demo
+## Demo Flow
 
-카메라 또는 HuskyLens가 강아지/대상 객체를 인식하면 Python 프로그램이 탐지 결과를 처리하고,  
-Discord Webhook을 통해 관리자에게 실시간 알림을 전송합니다.
+실제 구현 사진은 없지만, 프로젝트의 작동 흐름은 다음과 같습니다.
 
 ```txt
-Camera / HuskyLens
-        ↓
-Object Detection
-        ↓
-Python Event Handler
-        ↓
-Discord Webhook
-        ↓
-Real-time Alert
-```
-
-> 데모 GIF 또는 실제 테스트 이미지를 추가하면 프로젝트 완성도를 더 잘 보여줄 수 있습니다.
-
-```md
-![demo](docs/demo.gif)
+1. Camera / HuskyLens가 대상을 인식
+2. Python 프로그램이 탐지 결과를 처리
+3. 탐지 조건이 충족되면 이벤트 발생
+4. Discord Webhook으로 알림 전송
+5. 사용자가 실시간으로 알림 확인
 ```
 
 ## Result
@@ -66,25 +55,16 @@ Real-time Alert
 | Raspberry Pi 실행 | 테스트 예정 |
 | YOLO 모델 확장 | 개선 예정 |
 
-## Screenshots
+## Current Status
 
-### Detection Program
-
-```md
-![program screenshot](docs/program-screenshot.png)
-```
-
-### Discord Alert
-
-```md
-![discord alert](docs/discord-alert.png)
-```
-
-### Prototype Setup
-
-```md
-![prototype setup](docs/prototype-setup.jpg)
-```
+| 항목 | 상태 |
+|---|---|
+| 프로젝트 기획 | 완료 |
+| 시스템 구조 설계 | 완료 |
+| Python 탐지 로직 | 구현 중 |
+| Discord Webhook 알림 구조 | 구현 완료 |
+| Raspberry Pi 독립 실행 | 테스트 예정 |
+| 실제 현장 테스트 | 테스트 예정 |
 
 ## 사용 기술
 
